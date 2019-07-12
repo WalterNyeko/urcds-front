@@ -1,0 +1,29 @@
+.btn-primary {
+  background-image: -webkit-gradient(
+    linear,
+    0 0,
+    0 100%,
+    from(#6d94bf),
+    color-stop(50%, #446e9b),
+    to(#3e648d)
+  ) !important;
+  background-image: -webkit-linear-gradient(
+    #6d94bf,
+    #446e9b 50%,
+    #3e648d
+  ) !important;
+  background-image: -moz-linear-gradient(
+    top,
+    #6d94bf,
+    #446e9b 50%,
+    #3e648d
+  ) !important;
+  background-image: linear-gradient(#6d94bf, #446e9b 50%, #3e648d) !important;
+  background-repeat: no-repeat;
+  border: 1px solid #345578 !important;
+  z-index: 999 !important;
+}
+
+.error {
+  border-color: red;
+}
