@@ -45,13 +45,19 @@ class Home extends Component {
                 {/* <!-- Menu Container --> */}
                 <ul className="side-bar-items">
                   <li className="menu-title">RCDS</li>
-                  <li className="active" onClick={this.showDashboard}>
+                  <li
+                    className={this.state.showDashboard ? "active" : ""}
+                    onClick={this.showDashboard}
+                  >
                     <a>
                       <i className="fa fa-home" />
                       <span>Dashboard</span>
                     </a>
                   </li>
-                  <li className="" onClick={this.showCrashes}>
+                  <li
+                    className={this.state.showCrashes ? "active" : ""}
+                    onClick={this.showCrashes}
+                  >
                     <a>
                       <i className="fa fa-motorcycle" />
                       <span>Crashes</span>
@@ -194,7 +200,7 @@ class Home extends Component {
 
             {/* <!-- Page Footer --> */}
 
-            <div className="page-ftr">
+            <div className="page-ftr footer-bottom">
               <div>
                 <Footer />
               </div>
