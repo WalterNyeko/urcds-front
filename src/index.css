@@ -24,3 +24,15 @@ span {
 .sticky-bottom {
   /* height: 50px !important; */
 }
+
+.footer-bottom {
+  bottom: 0;
+}
+
+.text-sm {
+  font-size: 12px;
+}
+
+.form-control {
+  margin: 0 !important;
+}

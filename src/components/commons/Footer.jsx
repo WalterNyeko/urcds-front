@@ -6,7 +6,9 @@ class Footer extends Component {
       <footer className="text-white-50 sticky-bottom">
         <div className="row">
           <div className="col-md-4 version">
-            <label>Version 2.0-SNAPSHOT | Logged in as : Admin</label>
+            <label className="text-dark pt-3">
+              Version 2.0-SNAPSHOT | Logged in as : Admin
+            </label>
           </div>
           <div className="col-md-4" />
           <div className="col-md-4 pr-2">

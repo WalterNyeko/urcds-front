@@ -22,6 +22,68 @@ export default class CrashList extends Component {
               </thead>
               <tbody>
                 <tr>
+                  <td>
+                    <input
+                      type="text"
+                      className="form-control form-control-sm"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      className="form-control form-control-sm"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      className="form-control form-control-sm"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      className="form-control form-control-sm"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      className="form-control form-control-sm"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      className="form-control form-control-sm"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      className="form-control form-control-sm"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      className="form-control form-control-sm"
+                    />
+                  </td>
+                  <td>
+                    <span className="text-sm pt-4">View</span>{" "}
+                  </td>
+                  <td>
+                    <span className="text-sm">Edit</span>
+                  </td>
+                  <td>
+                    <span className="text-sm">Delete</span>
+                  </td>
+                  <td>
+                    <span className="text-sm">Map</span>
+                  </td>
+                </tr>
+                <tr>
                   <td>Gulu</td>
                   <td>Olya Road</td>
                   <td>Fatal</td>
@@ -263,6 +325,312 @@ export default class CrashList extends Component {
                 </tr>
                 <tr>
                   <td>Gulu</td>
+                  <td>Olya Road</td>
+                  <td>Fatal</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>July 31, 2019</td>
+                  <td>Gulu CPS</td>
+                  <td>Gulu</td>
+                  <td>
+                    <a href="#" className="btn bg-police btn-sm">
+                      <i className="fa fa-search" />
+                    </a>
+                  </td>
+                  <td>
+                    <a href="#" className="btn bg-police btn-sm">
+                      <i className="fa fa-edit" />
+                    </a>
+                  </td>
+                  <td>
+                    <a href="#" className="btn bg-police btn-sm">
+                      <i className="fa fa-times" />
+                    </a>
+                  </td>
+                  <td>
+                    <a href="#" className="">
+                      <img
+                        className="fa fa-map"
+                        src="images/gglMap.png"
+                        alt=""
+                      />
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Gulu</td>
+                  <td>Olya Road</td>
+                  <td>Fatal</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>July 31, 2019</td>
+                  <td>Gulu CPS</td>
+                  <td>Gulu</td>
+                  <td>
+                    <a href="#" className="btn bg-police btn-sm">
+                      <i className="fa fa-search" />
+                    </a>
+                  </td>
+                  <td>
+                    <a href="#" className="btn bg-police btn-sm">
+                      <i className="fa fa-edit" />
+                    </a>
+                  </td>
+                  <td>
+                    <a href="#" className="btn bg-police btn-sm">
+                      <i className="fa fa-times" />
+                    </a>
+                  </td>
+                  <td>
+                    <a href="#" className="">
+                      <img
+                        className="fa fa-map"
+                        src="images/gglMap.png"
+                        alt=""
+                      />
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Gulu</td>
+                  <td>Olya Road</td>
+                  <td>Fatal</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>July 31, 2019</td>
+                  <td>Gulu CPS</td>
+                  <td>Gulu</td>
+                  <td>
+                    <a href="#" className="btn bg-police btn-sm">
+                      <i className="fa fa-search" />
+                    </a>
+                  </td>
+                  <td>
+                    <a href="#" className="btn bg-police btn-sm">
+                      <i className="fa fa-edit" />
+                    </a>
+                  </td>
+                  <td>
+                    <a href="#" className="btn bg-police btn-sm">
+                      <i className="fa fa-times" />
+                    </a>
+                  </td>
+                  <td>
+                    <a href="#" className="">
+                      <img
+                        className="fa fa-map"
+                        src="images/gglMap.png"
+                        alt=""
+                      />
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Gulu</td>
+                  <td>Olya Road</td>
+                  <td>Fatal</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>July 31, 2019</td>
+                  <td>Gulu CPS</td>
+                  <td>Gulu</td>
+                  <td>
+                    <a href="#" className="btn bg-police btn-sm">
+                      <i className="fa fa-search" />
+                    </a>
+                  </td>
+                  <td>
+                    <a href="#" className="btn bg-police btn-sm">
+                      <i className="fa fa-edit" />
+                    </a>
+                  </td>
+                  <td>
+                    <a href="#" className="btn bg-police btn-sm">
+                      <i className="fa fa-times" />
+                    </a>
+                  </td>
+                  <td>
+                    <a href="#" className="">
+                      <img
+                        className="fa fa-map"
+                        src="images/gglMap.png"
+                        alt=""
+                      />
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Gulu</td>
+                  <td>Olya Road</td>
+                  <td>Fatal</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>July 31, 2019</td>
+                  <td>Gulu CPS</td>
+                  <td>Gulu</td>
+                  <td>
+                    <a href="#" className="btn bg-police btn-sm">
+                      <i className="fa fa-search" />
+                    </a>
+                  </td>
+                  <td>
+                    <a href="#" className="btn bg-police btn-sm">
+                      <i className="fa fa-edit" />
+                    </a>
+                  </td>
+                  <td>
+                    <a href="#" className="btn bg-police btn-sm">
+                      <i className="fa fa-times" />
+                    </a>
+                  </td>
+                  <td>
+                    <a href="#" className="">
+                      <img
+                        className="fa fa-map"
+                        src="images/gglMap.png"
+                        alt=""
+                      />
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Gulu</td>
+                  <td>Olya Road</td>
+                  <td>Fatal</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>July 31, 2019</td>
+                  <td>Gulu CPS</td>
+                  <td>Gulu</td>
+                  <td>
+                    <a href="#" className="btn bg-police btn-sm">
+                      <i className="fa fa-search" />
+                    </a>
+                  </td>
+                  <td>
+                    <a href="#" className="btn bg-police btn-sm">
+                      <i className="fa fa-edit" />
+                    </a>
+                  </td>
+                  <td>
+                    <a href="#" className="btn bg-police btn-sm">
+                      <i className="fa fa-times" />
+                    </a>
+                  </td>
+                  <td>
+                    <a href="#" className="">
+                      <img
+                        className="fa fa-map"
+                        src="images/gglMap.png"
+                        alt=""
+                      />
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Gulu</td>
+                  <td>Olya Road</td>
+                  <td>Fatal</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>July 31, 2019</td>
+                  <td>Gulu CPS</td>
+                  <td>Gulu</td>
+                  <td>
+                    <a href="#" className="btn bg-police btn-sm">
+                      <i className="fa fa-search" />
+                    </a>
+                  </td>
+                  <td>
+                    <a href="#" className="btn bg-police btn-sm">
+                      <i className="fa fa-edit" />
+                    </a>
+                  </td>
+                  <td>
+                    <a href="#" className="btn bg-police btn-sm">
+                      <i className="fa fa-times" />
+                    </a>
+                  </td>
+                  <td>
+                    <a href="#" className="">
+                      <img
+                        className="fa fa-map"
+                        src="images/gglMap.png"
+                        alt=""
+                      />
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Gulu</td>
+                  <td>Olya Road</td>
+                  <td>Fatal</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>July 31, 2019</td>
+                  <td>Gulu CPS</td>
+                  <td>Gulu</td>
+                  <td>
+                    <a href="#" className="btn bg-police btn-sm">
+                      <i className="fa fa-search" />
+                    </a>
+                  </td>
+                  <td>
+                    <a href="#" className="btn bg-police btn-sm">
+                      <i className="fa fa-edit" />
+                    </a>
+                  </td>
+                  <td>
+                    <a href="#" className="btn bg-police btn-sm">
+                      <i className="fa fa-times" />
+                    </a>
+                  </td>
+                  <td>
+                    <a href="#" className="">
+                      <img
+                        className="fa fa-map"
+                        src="images/gglMap.png"
+                        alt=""
+                      />
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Gulu</td>
+                  <td>Olya Road</td>
+                  <td>Fatal</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>July 31, 2019</td>
+                  <td>Gulu CPS</td>
+                  <td>Gulu</td>
+                  <td>
+                    <a href="#" className="btn bg-police btn-sm">
+                      <i className="fa fa-search" />
+                    </a>
+                  </td>
+                  <td>
+                    <a href="#" className="btn bg-police btn-sm">
+                      <i className="fa fa-edit" />
+                    </a>
+                  </td>
+                  <td>
+                    <a href="#" className="btn bg-police btn-sm">
+                      <i className="fa fa-times" />
+                    </a>
+                  </td>
+                  <td>
+                    <a href="#" className="">
+                      <img
+                        className="fa fa-map"
+                        src="images/gglMap.png"
+                        alt=""
+                      />
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Gulu 123</td>
                   <td>Olya Road</td>
                   <td>Fatal</td>
                   <td>2</td>
@@ -297,6 +665,35 @@ export default class CrashList extends Component {
                 </tr>
               </tbody>
             </table>
+            <nav aria-label="Page navigation example">
+              <ul class="pagination">
+                <li class="page-item">
+                  <a class="page-link" href="#">
+                    Previous
+                  </a>
+                </li>
+                <li class="page-item active">
+                  <a class="page-link" href="#">
+                    1
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#">
+                    2
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#">
+                    3
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#">
+                    Next
+                  </a>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
       </div>
