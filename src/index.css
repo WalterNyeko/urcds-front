@@ -1,7 +1,7 @@
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 body {
-  overflow-x: scroll !important;
+  overflow-x: hidden !important;
   overflow-y: scroll !important;
 }
 
@@ -20,4 +20,7 @@ span {
 }
 .icon {
   cursor: pointer;
+}
+.sticky-bottom {
+  /* height: 50px !important; */
 }

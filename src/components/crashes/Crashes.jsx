@@ -1,57 +1,37 @@
-import React, { Fragment } from "react";
-import Tabs from "react-bootstrap/Tabs";
-import Tab from "react-bootstrap/Tab";
-import "../../styles/Crashes.css";
-import CrashesTable from "./CrashesTable";
-import AddCrashForm from "../../containers/crashes/AddCrashForm";
+import React, { Component } from "react";
+import CrashList from "./CrashList";
 
-const Crashes = props => {
-  return (
-    <Fragment>
-      <div className="main-content">
-        <div className="container-fluid mt-4">
-          <div className="text-center">
-            <div className="h1">Crash List</div>
+class Crashes extends Component {
+  render() {
+    return (
+      <div>
+        {/* <!-- Main Page Wrapper --> */}
+        <div className="page-wrapper">
+          {/* <!-- Page Title --> */}
+          <div className="page-title">
+            <div className="row align-items-center">
+              <div className="col-sm-6">
+                <h2 className="page-title-text"> Crash Statistics</h2>
+              </div>
+              <div className="col-sm-6 text-right">
+                <div className="breadcrumbs">
+                  <ul>
+                    <li>
+                      <a href="#">Home</a>
+                    </li>
+                    <li>Dashboard</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
-
-          <Tabs
-            id="controlled-tab-example"
-            activeKey={props.state.key}
-            onSelect={props.handleChange}
-            className="test"
-          >
-            <Tab
-              eventKey="recent-crashes"
-              title="Recent Crashes"
-              style={{ overflowX: "scroll" }}
-            >
-              <CrashesTable />
-            </Tab>
-            <Tab
-              eventKey="all-crash"
-              title="All Crashes"
-              style={{ overflowX: "scroll" }}
-            >
-              <CrashesTable />
-            </Tab>
-            <Tab
-              eventKey="remove-crash"
-              title="Removed Crashes"
-              style={{ overflowX: "scroll" }}
-            >
-              <CrashesTable />
-            </Tab>
-            <Tab
-              eventKey="add-crash"
-              title="Add Crash"
-              style={{ overflowX: "hidden" }}
-            >
-              <AddCrashForm />
-            </Tab>
-          </Tabs>
+          {/* <!-- Page Body --> */}
+          <div className="">
+            <CrashList />
+          </div>
         </div>
       </div>
-    </Fragment>
-  );
-};
+    );
+  }
+}
 export default Crashes;
