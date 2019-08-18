@@ -268,12 +268,6 @@ class Home extends Component {
                 showCrashes={this.showCrashes}
               />
             )}
-            {showPatients && (
-              <Patients
-                showPatientsForm={this.showPatientsForm}
-                showDashboard={this.showDashboard}
-              />
-            )}
             {showPatientsForm && (
               <PatientsForm
                 showDashboard={this.showDashboard}
