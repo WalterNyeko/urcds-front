@@ -4,6 +4,8 @@ import { Router } from "react-router";
 import history from "./helpers/history";
 import Routes from "./helpers/Routes";
 import Dashboard from "./components/dashboard/Home";
+import "react-table/react-table.css";
+
 class App extends React.Component {
   render() {
     return (

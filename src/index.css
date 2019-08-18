@@ -1,4 +1,5 @@
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "./styles/ReactTable.css";
 
 body {
   overflow-x: hidden !important;
@@ -15,9 +16,11 @@ span {
   cursor: pointer;
   color: #3e648d;
 }
+
 .btn-secondary {
   cursor: pointer;
 }
+
 .icon {
   cursor: pointer;
 }
