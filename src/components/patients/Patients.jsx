@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import CrashList from "./CrashList";
+import PatientsList from "./PatientsList";
 
-class Crashes extends Component {
+class Patients extends Component {
   render() {
-    const { showCrashForm, showDashboard } = this.props;
+    const { showPatientsForm, showDashboard } = this.props;
     return (
       <div>
         {/* <!-- Main Page Wrapper --> */}
@@ -12,7 +12,7 @@ class Crashes extends Component {
           <div className="page-title">
             <div className="row align-items-center">
               <div className="col-sm-6">
-                <h2 className="page-title-text"> Crashes</h2>
+                <h2 className="page-title-text">Patients</h2>
               </div>
               <div className="col-sm-6 text-right">
                 <div className="breadcrumbs">
@@ -22,7 +22,7 @@ class Crashes extends Component {
                         Dashboard
                       </a>
                     </li>
-                    <li>Crashes</li>
+                    <li>Patients</li>
                   </ul>
                 </div>
               </div>
@@ -63,9 +63,9 @@ class Crashes extends Component {
                     <a
                       href="#"
                       className="text-decoration-none"
-                      onClick={showCrashForm}
+                      onClick={showPatientsForm}
                     >
-                      Add Crash
+                      Add Patients
                     </a>
                   </span>
                 </div>
@@ -75,11 +75,11 @@ class Crashes extends Component {
           </div>
           {/* <!-- Page Body --> */}
           <div className="">
-            <CrashList />
+            <PatientsList />
           </div>
         </div>
       </div>
     );
   }
 }
-export default Crashes;
+export default Patients;

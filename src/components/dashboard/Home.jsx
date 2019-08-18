@@ -2,11 +2,25 @@ import React, { Component } from "react";
 import Footer from "../commons/Footer";
 import Dashboard from "./Dashboard";
 import Crashes from "../crashes/Crashes";
+import CrashForm from "../crashes/CrashForm";
+import Patients from "../patients/Patients";
+import Analysis from "../analysis/Analysis";
+import Administration from "../aministration/Administration";
+import Report from "../report/Report";
+import Mapping from "../mapping/Mapping";
+import PatientsForm from "../patients/PatientsForm";
 
 class Home extends Component {
   state = {
     showDashboard: true,
-    showCrashes: false
+    showCrashes: false,
+    showCrashForm: false,
+    showPatients: false,
+    showPatientsForm: false,
+    showAnalysis: false,
+    showMapping: false,
+    showReport: false,
+    showAdminPage: false
   };
 
   setStateValues = stateValue => {
@@ -17,23 +31,56 @@ class Home extends Component {
     });
   };
 
-  makeCrashesVisible = stateValue => {
-    this.setStateValues(stateValue);
-  };
-
-  makeDashboardVisible = stateValue => {
-    this.setStateValues(stateValue);
-  };
-
   showCrashes = () => {
-    this.makeCrashesVisible("showCrashes");
+    this.setStateValues("showCrashes");
+  };
+
+  showCrashForm = () => {
+    this.setStateValues("showCrashForm");
   };
 
   showDashboard = () => {
-    this.makeDashboardVisible("showDashboard");
+    this.setStateValues("showDashboard");
+  };
+
+  showPatients = () => {
+    this.setStateValues("showPatients");
+  };
+
+  showPatientsForm = () => {
+    this.setStateValues("showPatientsForm");
+  };
+
+  showAnalysis = () => {
+    this.setStateValues("showAnalysis");
+  };
+
+  showMapping = () => {
+    this.setStateValues("showMapping");
+  };
+
+  showReport = () => {
+    this.setStateValues("showReport");
+  };
+
+  showAdminPage = () => {
+    this.setStateValues("showAdminPage");
   };
 
   render() {
+    const {
+      showDashboard,
+      showCrashes,
+      showCrashForm,
+      showPatients,
+      showPatientsForm,
+      showAnalysis,
+      showMapping,
+      showReport,
+      showAdminPage
+    } = this.state;
+    console.log("testing.......");
+
     return (
       <div>
         <div className="wrapper">
@@ -46,7 +93,7 @@ class Home extends Component {
                 <ul className="side-bar-items">
                   <li className="menu-title">RCDS</li>
                   <li
-                    className={this.state.showDashboard ? "active" : ""}
+                    className={showDashboard ? "active" : ""}
                     onClick={this.showDashboard}
                   >
                     <a>
@@ -55,7 +102,7 @@ class Home extends Component {
                     </a>
                   </li>
                   <li
-                    className={this.state.showCrashes ? "active" : ""}
+                    className={showCrashes || showCrashForm ? "active" : ""}
                     onClick={this.showCrashes}
                   >
                     <a>
@@ -63,31 +110,46 @@ class Home extends Component {
                       <span>Crashes</span>
                     </a>
                   </li>
-                  <li className="has-sub">
+                  <li
+                    className={showPatients || showPatientsForm ? "active" : ""}
+                    onClick={this.showPatients}
+                  >
                     <a>
                       <i className="fa fa-users" />
                       <span>Patients</span>
                     </a>
                   </li>
-                  <li className="has-sub">
+                  <li
+                    className={showAnalysis ? "active" : ""}
+                    onClick={this.showAnalysis}
+                  >
                     <a>
                       <i className="fa fa-chart-bar" />
                       <span>Analysis</span>
                     </a>
                   </li>
-                  <li className="has-sub">
+                  <li
+                    className={showMapping ? "active" : ""}
+                    onClick={this.showMapping}
+                  >
                     <a>
                       <i className="fa fa-map-marker" />
                       <span>Mapping</span>
                     </a>
                   </li>
-                  <li className="has-sub">
+                  <li
+                    className={showReport ? "active" : ""}
+                    onClick={this.showReport}
+                  >
                     <a>
                       <i className="fa fa-file" />
                       <span>Report</span>
                     </a>
                   </li>
-                  <li className="has-sub">
+                  <li
+                    className={showAdminPage ? "active" : ""}
+                    onClick={this.showAdminPage}
+                  >
                     <a>
                       <i className="icon-screen-desktop" />
                       <span>Administration</span>
@@ -144,7 +206,6 @@ class Home extends Component {
                           <div className="menu-dropdown-head pb-3">
                             <div className="tbl-cell">
                               <img src="uploads/author-1.jpg" alt="" />
-                              {/* <!-- <i className="fa fa-user-circle"></i> --> */}
                             </div>
                             <div className="tbl-cell pl-2 text-left">
                               <p className="m-0 font-18">Walter Nyeko</p>
@@ -195,10 +256,37 @@ class Home extends Component {
                 </div>
               </div>
             </div>
-            {this.state.showDashboard && <Dashboard />}
-            {this.state.showCrashes && <Crashes />}
-
-            {/* <!-- Page Footer --> */}
+            {showDashboard && <Dashboard />}
+            {showCrashes && (
+              <Crashes
+                showCrashForm={this.showCrashForm}
+                showDashboard={this.showDashboard}
+              />
+            )}
+            {showCrashForm && (
+              <CrashForm
+                showDashboard={this.showDashboard}
+                showCrashes={this.showCrashes}
+              />
+            )}
+            {showPatients && (
+              <Patients
+                showPatientsForm={this.showPatientsForm}
+                showDashboard={this.showDashboard}
+              />
+            )}
+            {showPatientsForm && (
+              <PatientsForm
+                showDashboard={this.showDashboard}
+                showPatients={this.showPatients}
+              />
+            )}
+            {showAnalysis && <Analysis showDashboard={this.showDashboard} />}
+            {showAdminPage && (
+              <Administration showDashboard={this.showDashboard} />
+            )}
+            {showReport && <Report showDashboard={this.showDashboard} />}
+            {showMapping && <Mapping showDashboard={this.showDashboard} />}
 
             <div className="page-ftr footer-bottom">
               <div>

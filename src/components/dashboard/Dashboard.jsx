@@ -16,9 +16,6 @@ class Dashboard extends Component {
               <div className="col-sm-6 text-right">
                 <div className="breadcrumbs">
                   <ul>
-                    <li>
-                      <a href="#">Home</a>
-                    </li>
                     <li>Dashboard</li>
                   </ul>
                 </div>

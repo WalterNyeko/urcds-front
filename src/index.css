@@ -21,9 +21,6 @@ span {
 .icon {
   cursor: pointer;
 }
-.sticky-bottom {
-  /* height: 50px !important; */
-}
 
 .footer-bottom {
   bottom: 0;
@@ -35,4 +32,10 @@ span {
 
 .form-control {
   margin: 0 !important;
+}
+.page-body {
+  min-height: 65vh;
+}
+.default-body {
+  min-height: 600px;
 }

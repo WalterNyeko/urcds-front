@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class CrashList extends Component {
+class PatientsList extends Component {
   render() {
     return (
       <div class="page-body">
@@ -394,3 +394,4 @@ export default class CrashList extends Component {
     );
   }
 }
+export default PatientsList;
