@@ -3,24 +3,24 @@ import Footer from "../commons/Footer";
 import Dashboard from "./Dashboard";
 import Crashes from "../crashes/Crashes";
 import CrashForm from "../crashes/CrashForm";
-import Patients from "../patients/Patients";
 import Analysis from "../analysis/Analysis";
 import Administration from "../aministration/Administration";
 import Report from "../report/Report";
 import Mapping from "../mapping/Mapping";
 import PatientsForm from "../patients/PatientsForm";
+import Patients from "../patients";
 
 class Home extends Component {
   state = {
     showDashboard: true,
     showCrashes: false,
     showCrashForm: false,
-    showPatients: false,
     showPatientsForm: false,
     showAnalysis: false,
     showMapping: false,
     showReport: false,
-    showAdminPage: false
+    showAdminPage: false,
+    showPatients: false
   };
 
   setStateValues = stateValue => {
@@ -67,6 +67,9 @@ class Home extends Component {
     this.setStateValues("showAdminPage");
   };
 
+  showPatients = () => {
+    this.setStateValues("showPatients");
+  };
   render() {
     const {
       showDashboard,
@@ -111,7 +114,11 @@ class Home extends Component {
                     </a>
                   </li>
                   <li
+<<<<<<< HEAD
                     className={showPatients || showPatientsForm ? "active" : ""}
+=======
+                    className={this.state.showPatients ? "active" : ""}
+>>>>>>> create ui component showing crash patients
                     onClick={this.showPatients}
                   >
                     <a>
@@ -256,6 +263,7 @@ class Home extends Component {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
             {showDashboard && <Dashboard />}
             {showCrashes && (
               <Crashes
@@ -287,6 +295,13 @@ class Home extends Component {
             )}
             {showReport && <Report showDashboard={this.showDashboard} />}
             {showMapping && <Mapping showDashboard={this.showDashboard} />}
+=======
+            {this.state.showDashboard && <Dashboard />}
+            {this.state.showCrashes && <Crashes />}
+            {this.state.showPatients && <Patients />}
+
+            {/* <!-- Page Footer --> */}
+>>>>>>> create ui component showing crash patients
 
             <div className="page-ftr footer-bottom">
               <div>
