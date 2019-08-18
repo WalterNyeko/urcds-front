@@ -43,10 +43,6 @@ class Home extends Component {
     this.setStateValues("showDashboard");
   };
 
-  showPatients = () => {
-    this.setStateValues("showPatients");
-  };
-
   showPatientsForm = () => {
     this.setStateValues("showPatientsForm");
   };
@@ -114,11 +110,7 @@ class Home extends Component {
                     </a>
                   </li>
                   <li
-<<<<<<< HEAD
-                    className={showPatients || showPatientsForm ? "active" : ""}
-=======
                     className={this.state.showPatients ? "active" : ""}
->>>>>>> create ui component showing crash patients
                     onClick={this.showPatients}
                   >
                     <a>
@@ -263,7 +255,6 @@ class Home extends Component {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
             {showDashboard && <Dashboard />}
             {showCrashes && (
               <Crashes
@@ -295,13 +286,9 @@ class Home extends Component {
             )}
             {showReport && <Report showDashboard={this.showDashboard} />}
             {showMapping && <Mapping showDashboard={this.showDashboard} />}
-=======
-            {this.state.showDashboard && <Dashboard />}
-            {this.state.showCrashes && <Crashes />}
             {this.state.showPatients && <Patients />}
 
             {/* <!-- Page Footer --> */}
->>>>>>> create ui component showing crash patients
 
             <div className="page-ftr footer-bottom">
               <div>
