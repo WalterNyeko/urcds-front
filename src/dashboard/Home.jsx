@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import Footer from "../commons/Footer";
+import Footer from "../footer";
 import Dashboard from "./Dashboard";
-import Crashes from "../crashes/Crashes";
+import Crashes from "../crashes";
 import CrashForm from "../crashes/CrashForm";
-import Analysis from "../analysis/Analysis";
-import Administration from "../aministration/Administration";
-import Report from "../report/Report";
-import Mapping from "../mapping/Mapping";
+import Analysis from "../analysis";
+import Administration from "../administration";
+import Report from "../report";
+import Mapping from "../mapping";
 import PatientsForm from "../patients/PatientsForm";
 import Patients from "../patients";
 
@@ -71,7 +71,6 @@ class Home extends Component {
       showDashboard,
       showCrashes,
       showCrashForm,
-      showPatients,
       showPatientsForm,
       showAnalysis,
       showMapping,

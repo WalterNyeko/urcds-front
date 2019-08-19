@@ -16,13 +16,13 @@ class Footer extends Component {
               <div className="col-md-8" />
               <div className="col-md-4 p-2">
                 <img
-                  src={require("../../images/ugandan.png")}
+                  src={require("../images/ugandan.png")}
                   alt="ug"
                   style={{ width: "40px", height: "40px" }}
                   className="uganda-flag images-uganda"
                 />
                 <img
-                  src={require("../../images/proudly_ugandan.png")}
+                  src={require("../images/proudly_ugandan.png")}
                   alt="ug"
                   style={{ width: "70px", height: "20px" }}
                   className="proudly-ugandan images-uganda  pr-2"

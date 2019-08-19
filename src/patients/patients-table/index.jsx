@@ -1,7 +1,8 @@
 import React from "react";
 import ReactTable from "react-table";
+import "./patients-table.css";
 
-import data from "./data";
+import data from "../data";
 
 const columns = [
   { Header: "Patient No.", accessor: "patient_no" },
