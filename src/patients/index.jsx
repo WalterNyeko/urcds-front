@@ -1,12 +1,14 @@
 import React from "react";
-import PatientsTable from "./PatientsTable";
+import PatientsTable from "./patients-table";
 
 const Patients = () => (
   <div className="page-wrapper">
     <div className="page-title">
       <div className="row align-items-center">
         <div className="col-sm-6">
-          <h2 className="page-title-text"> Crash Patients</h2>
+          <h2 className="page-title-text" data-test="crash-patients-title">
+            Crash Patients
+          </h2>
         </div>
         <div className="col-sm-6 text-right">
           <div className="breadcrumbs">

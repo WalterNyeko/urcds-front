@@ -1,5 +1,4 @@
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-@import "./styles/ReactTable.css";
 
 body {
   overflow-x: hidden !important;
