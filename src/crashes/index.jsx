@@ -1,69 +1,52 @@
 import React from 'react';
 import CrashList from './CrashList';
 
-const Crashes = ({ showCrashForm, showDashboard }) => (
+const Crashes = () => (
   <div>
-    {/* <!-- Main Page Wrapper --> */}
     <div className="page-wrapper">
-      {/* <!-- Page Title --> */}
       <div className="page-title">
         <div className="row align-items-center">
           <div className="col-sm-6">
             <h2 className="page-title-text"> Crashes</h2>
-          </div>
-          <div className="col-sm-6 text-right">
-            <div className="breadcrumbs">
-              <ul>
-                <li>
-                  <a href="#" onClick={showDashboard}>
-                    Dashboard
-                  </a>
-                </li>
-                <li>Crashes</li>
-              </ul>
-            </div>
           </div>
           <div className="col-sm-6 row mt-3 mb-0">
             <div className="col-sm-5">
               <nav aria-label="Page navigation example">
                 <ul className="pagination">
                   <li className="page-item">
-                    <a className="page-link" href="#">
+                    <p className="page-link">
                       Previous
-                    </a>
+                    </p>
                   </li>
                   <li className="page-item active">
-                    <a className="page-link" href="#">
+                    <p className="page-link">
                       1
-                    </a>
+                    </p>
                   </li>
                   <li className="page-item">
-                    <a className="page-link" href="#">
+                    <p className="page-link">
                       2
-                    </a>
+                    </p>
                   </li>
                   <li className="page-item">
-                    <a class="page-link" href="#">
+                    <p className="page-link">
                       3
-                    </a>
+                    </p>
                   </li>
                   <li className="page-item">
-                    <a className="page-link" href="#">
+                    <p className="page-link">
                       Next
-                    </a>
+                    </p>
                   </li>
                 </ul>
               </nav>
             </div>
             <div className="col-sm-5">
               <span className="h4">
-                <a
-                  href="#"
-                  className="text-decoration-none"
-                  onClick={showCrashForm}
+                <p
                 >
                   Add Crash
-                </a>
+                </p>
               </span>
             </div>
             <div className="col-sm-2" />

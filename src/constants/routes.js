@@ -1,7 +1,10 @@
 export const DASHBOARD = '/';
 export const CRASHES = '/crashes';
+export const CRASH_FORM = '/crashform';
 export const ANALYSIS = '/analysis';
 export const MAPPINGS = '/mappings';
 export const PATIENTS = '/patients';
-export const PROFILE = '/patients';
+export const PATIENT_FORM = '/patientform';
+export const PROFILE = '/profile';
 export const REPORTS = '/reports';
+export const ADMINISTRATION = '/administration';
