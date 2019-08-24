@@ -1,5 +1,5 @@
-import React from "react";
-import PatientsTable from "./patients-table";
+import React from 'react';
+import PatientsTable from './patients-table';
 
 const Patients = () => (
   <div className="page-wrapper">
@@ -14,7 +14,7 @@ const Patients = () => (
           <div className="breadcrumbs">
             <ul>
               <li>
-                <a href="#">Home</a>
+                <p>Home</p>
               </li>
               <li>Dashboard</li>
             </ul>
@@ -23,7 +23,7 @@ const Patients = () => (
       </div>
     </div>
     <div className="page-body">
-      <div class="row">
+      <div className="row">
         <div className="col-md-12">
           <PatientsTable />
         </div>

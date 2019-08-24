@@ -1,14 +1,14 @@
-import React, { Component } from "react";
-import Footer from "../footer";
-import Dashboard from "./Dashboard";
-import Crashes from "../crashes";
-import CrashForm from "../crashes/CrashForm";
-import Analysis from "../analysis";
-import Administration from "../administration";
-import Report from "../report";
-import Mapping from "../mapping";
-import PatientsForm from "../patients/PatientsForm";
-import Patients from "../patients";
+import React, { Component } from 'react';
+import Footer from '../footer';
+import Dashboard from './Dashboard';
+import Crashes from '../crashes';
+import CrashForm from '../crashes/CrashForm';
+import Analysis from '../analysis';
+import Administration from '../administration';
+import Report from '../report';
+import Mapping from '../mapping';
+import PatientsForm from '../patients/PatientsForm';
+import Patients from '../patients';
 
 class Home extends Component {
   state = {
@@ -20,7 +20,7 @@ class Home extends Component {
     showMapping: false,
     showReport: false,
     showAdminPage: false,
-    showPatients: false
+    showPatients: false,
   };
 
   setStateValues = stateValue => {
@@ -32,40 +32,41 @@ class Home extends Component {
   };
 
   showCrashes = () => {
-    this.setStateValues("showCrashes");
+    this.setStateValues('showCrashes');
   };
 
   showCrashForm = () => {
-    this.setStateValues("showCrashForm");
+    this.setStateValues('showCrashForm');
   };
 
   showDashboard = () => {
-    this.setStateValues("showDashboard");
+    this.setStateValues('showDashboard');
   };
 
   showPatientsForm = () => {
-    this.setStateValues("showPatientsForm");
+    this.setStateValues('showPatientsForm');
   };
 
   showAnalysis = () => {
-    this.setStateValues("showAnalysis");
+    this.setStateValues('showAnalysis');
   };
 
   showMapping = () => {
-    this.setStateValues("showMapping");
+    this.setStateValues('showMapping');
   };
 
   showReport = () => {
-    this.setStateValues("showReport");
+    this.setStateValues('showReport');
   };
 
   showAdminPage = () => {
-    this.setStateValues("showAdminPage");
+    this.setStateValues('showAdminPage');
   };
 
   showPatients = () => {
-    this.setStateValues("showPatients");
+    this.setStateValues('showPatients');
   };
+
   render() {
     const {
       showDashboard,
@@ -75,9 +76,9 @@ class Home extends Component {
       showAnalysis,
       showMapping,
       showReport,
-      showAdminPage
+      showAdminPage,
     } = this.state;
-    console.log("testing.......");
+    console.log('testing.......');
 
     return (
       <div>
@@ -91,7 +92,7 @@ class Home extends Component {
                 <ul className="side-bar-items">
                   <li className="menu-title">RCDS</li>
                   <li
-                    className={showDashboard ? "active" : ""}
+                    className={showDashboard ? 'active' : ''}
                     onClick={this.showDashboard}
                   >
                     <a>
@@ -100,7 +101,7 @@ class Home extends Component {
                     </a>
                   </li>
                   <li
-                    className={showCrashes || showCrashForm ? "active" : ""}
+                    className={showCrashes || showCrashForm ? 'active' : ''}
                     onClick={this.showCrashes}
                   >
                     <a>
@@ -109,7 +110,7 @@ class Home extends Component {
                     </a>
                   </li>
                   <li
-                    className={this.state.showPatients ? "active" : ""}
+                    className={this.state.showPatients ? 'active' : ''}
                     onClick={this.showPatients}
                   >
                     <a>
@@ -118,7 +119,7 @@ class Home extends Component {
                     </a>
                   </li>
                   <li
-                    className={showAnalysis ? "active" : ""}
+                    className={showAnalysis ? 'active' : ''}
                     onClick={this.showAnalysis}
                   >
                     <a>
@@ -127,7 +128,7 @@ class Home extends Component {
                     </a>
                   </li>
                   <li
-                    className={showMapping ? "active" : ""}
+                    className={showMapping ? 'active' : ''}
                     onClick={this.showMapping}
                   >
                     <a>
@@ -136,7 +137,7 @@ class Home extends Component {
                     </a>
                   </li>
                   <li
-                    className={showReport ? "active" : ""}
+                    className={showReport ? 'active' : ''}
                     onClick={this.showReport}
                   >
                     <a>
@@ -145,7 +146,7 @@ class Home extends Component {
                     </a>
                   </li>
                   <li
-                    className={showAdminPage ? "active" : ""}
+                    className={showAdminPage ? 'active' : ''}
                     onClick={this.showAdminPage}
                   >
                     <a>

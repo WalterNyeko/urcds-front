@@ -1,16 +1,16 @@
-import { Chart } from "react-chartjs-2";
-var theHelp = Chart.helpers;
+import { Chart } from 'react-chartjs-2';
+let theHelp = Chart.helpers;
 
 export const severityOptions = {
   title: {
     display: true,
-    text: "How severe are the crashes registered?",
-    position: "top"
+    text: 'How severe are the crashes registered?',
+    position: 'top',
   },
   rotation: -0.7 * Math.PI,
   legend: {
     display: true,
-    position: "bottom",
+    position: 'bottom',
     labels: {
       generateLabels: function(chart) {
         var data = chart.data;
@@ -27,49 +27,49 @@ export const severityOptions = {
               : getValueAtIndexOrDefault(
                   ds.backgroundColor,
                   i,
-                  arcOpts.backgroundColor
+                  arcOpts.backgroundColor,
                 );
             var stroke = custom.borderColor
               ? custom.borderColor
               : getValueAtIndexOrDefault(
                   ds.borderColor,
                   i,
-                  arcOpts.borderColor
+                  arcOpts.borderColor,
                 );
             var bw = custom.borderWidth
               ? custom.borderWidth
               : getValueAtIndexOrDefault(
                   ds.borderWidth,
                   i,
-                  arcOpts.borderWidth
+                  arcOpts.borderWidth,
                 );
             return {
               // And finally :
-              text: ds.data[i] + "% of the crashes are " + label,
+              text: ds.data[i] + '% of the crashes are ' + label,
               fillStyle: fill,
               strokeStyle: stroke,
               lineWidth: bw,
               hidden: isNaN(ds.data[i]) || meta.data[i].hidden,
-              index: i
+              index: i,
             };
           });
         }
         return [];
-      }
-    }
-  }
+      },
+    },
+  },
 };
 export const causesOptions = {
   title: {
     display: true,
-    text: "How severe are the crashes registered?",
-    position: "top"
+    text: 'How severe are the crashes registered?',
+    position: 'top',
   },
   rotation: -0.7 * Math.PI,
   legend: {
     display: true,
-    position: "bottom",
-    align: "end",
+    position: 'bottom',
+    align: 'end',
     labels: {
       generateLabels: function(chart) {
         var data = chart.data;
@@ -86,35 +86,35 @@ export const causesOptions = {
               : getValueAtIndexOrDefault(
                   ds.backgroundColor,
                   i,
-                  arcOpts.backgroundColor
+                  arcOpts.backgroundColor,
                 );
             var stroke = custom.borderColor
               ? custom.borderColor
               : getValueAtIndexOrDefault(
                   ds.borderColor,
                   i,
-                  arcOpts.borderColor
+                  arcOpts.borderColor,
                 );
             var bw = custom.borderWidth
               ? custom.borderWidth
               : getValueAtIndexOrDefault(
                   ds.borderWidth,
                   i,
-                  arcOpts.borderWidth
+                  arcOpts.borderWidth,
                 );
             return {
               // And finally :
-              text: ds.data[i] + "% of the crashes are " + label,
+              text: ds.data[i] + '% of the crashes are ' + label,
               fillStyle: fill,
               strokeStyle: stroke,
               lineWidth: bw,
               hidden: isNaN(ds.data[i]) || meta.data[i].hidden,
-              index: i
+              index: i,
             };
           });
         }
         return [];
-      }
-    }
-  }
+      },
+    },
+  },
 };
