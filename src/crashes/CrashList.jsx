@@ -67,24 +67,24 @@ const CrashList = () => (
               <td>Gulu CPS</td>
               <td>Gulu</td>
               <td>
-                <a href="#" className="btn bg-police btn-sm">
+                <p className="btn bg-police btn-sm">
                   <i className="fa fa-search" />
-                </a>
+                </p>
               </td>
               <td>
-                <a href="#" className="btn bg-police btn-sm">
+                <p className="btn bg-police btn-sm">
                   <i className="fa fa-edit" />
-                </a>
+                </p>
               </td>
               <td>
-                <a href="#" className="btn bg-police btn-sm">
+                <p className="btn bg-police btn-sm">
                   <i className="fa fa-times" />
-                </a>
+                </p>
               </td>
               <td>
-                <a href="#" className="">
+                <p className="">
                   <img className="fa fa-map" src="images/gglMap.png" alt="" />
-                </a>
+                </p>
               </td>
             </tr>
 
@@ -98,24 +98,24 @@ const CrashList = () => (
               <td>Gulu CPS</td>
               <td>Gulu</td>
               <td>
-                <a href="#" className="btn bg-police btn-sm">
+                <p className="btn bg-police btn-sm">
                   <i className="fa fa-search" />
-                </a>
+                </p>
               </td>
               <td>
-                <a href="#" className="btn bg-police btn-sm">
+                <p className="btn bg-police btn-sm">
                   <i className="fa fa-edit" />
-                </a>
+                </p>
               </td>
               <td>
-                <a href="#" className="btn bg-police btn-sm">
+                <p className="btn bg-police btn-sm">
                   <i className="fa fa-times" />
-                </a>
+                </p>
               </td>
               <td>
-                <a href="#" className="">
+                <p className="">
                   <img className="fa fa-map" src="images/gglMap.png" alt="" />
-                </a>
+                </p>
               </td>
             </tr>
 
@@ -129,24 +129,24 @@ const CrashList = () => (
               <td>Gulu CPS</td>
               <td>Gulu</td>
               <td>
-                <a href="#" className="btn bg-police btn-sm">
+                <p className="btn bg-police btn-sm">
                   <i className="fa fa-search" />
-                </a>
+                </p>
               </td>
               <td>
-                <a href="#" className="btn bg-police btn-sm">
+                <p className="btn bg-police btn-sm">
                   <i className="fa fa-edit" />
-                </a>
+                </p>
               </td>
               <td>
-                <a href="#" className="btn bg-police btn-sm">
+                <p className="btn bg-police btn-sm">
                   <i className="fa fa-times" />
-                </a>
+                </p>
               </td>
               <td>
-                <a href="#" className="">
+                <p className="">
                   <img className="fa fa-map" src="images/gglMap.png" alt="" />
-                </a>
+                </p>
               </td>
             </tr>
             <tr>
@@ -159,24 +159,24 @@ const CrashList = () => (
               <td>Gulu CPS</td>
               <td>Gulu</td>
               <td>
-                <a href="#" className="btn bg-police btn-sm">
+                <p className="btn bg-police btn-sm">
                   <i className="fa fa-search" />
-                </a>
+                </p>
               </td>
               <td>
-                <a href="#" className="btn bg-police btn-sm">
+                <p className="btn bg-police btn-sm">
                   <i className="fa fa-edit" />
-                </a>
+                </p>
               </td>
               <td>
-                <a href="#" className="btn bg-police btn-sm">
+                <p className="btn bg-police btn-sm">
                   <i className="fa fa-times" />
-                </a>
+                </p>
               </td>
               <td>
-                <a href="#" className="">
+                <p className="">
                   <img className="fa fa-map" src="images/gglMap.png" alt="" />
-                </a>
+                </p>
               </td>
             </tr>
             <tr>
@@ -189,24 +189,24 @@ const CrashList = () => (
               <td>Gulu CPS</td>
               <td>Gulu</td>
               <td>
-                <a href="#" className="btn bg-police btn-sm">
+                <p className="btn bg-police btn-sm">
                   <i className="fa fa-search" />
-                </a>
+                </p>
               </td>
               <td>
-                <a href="#" className="btn bg-police btn-sm">
+                <p className="btn bg-police btn-sm">
                   <i className="fa fa-edit" />
-                </a>
+                </p>
               </td>
               <td>
-                <a href="#" className="btn bg-police btn-sm">
+                <p className="btn bg-police btn-sm">
                   <i className="fa fa-times" />
-                </a>
+                </p>
               </td>
               <td>
-                <a href="#" className="">
+                <p className="">
                   <img className="fa fa-map" src="images/gglMap.png" alt="" />
-                </a>
+                </p>
               </td>
             </tr>
             <tr>
@@ -219,24 +219,24 @@ const CrashList = () => (
               <td>Gulu CPS</td>
               <td>Gulu</td>
               <td>
-                <a href="#" className="btn bg-police btn-sm">
+                <p className="btn bg-police btn-sm">
                   <i className="fa fa-search" />
-                </a>
+                </p>
               </td>
               <td>
-                <a href="#" className="btn bg-police btn-sm">
+                <p className="btn bg-police btn-sm">
                   <i className="fa fa-edit" />
-                </a>
+                </p>
               </td>
               <td>
-                <a href="#" className="btn bg-police btn-sm">
+                <p className="btn bg-police btn-sm">
                   <i className="fa fa-times" />
-                </a>
+                </p>
               </td>
               <td>
-                <a href="#" className="">
+                <p className="">
                   <img className="fa fa-map" src="images/gglMap.png" alt="" />
-                </a>
+                </p>
               </td>
             </tr>
             <tr>
@@ -249,24 +249,24 @@ const CrashList = () => (
               <td>Gulu CPS</td>
               <td>Gulu</td>
               <td>
-                <a href="#" className="btn bg-police btn-sm">
+                <p className="btn bg-police btn-sm">
                   <i className="fa fa-search" />
-                </a>
+                </p>
               </td>
               <td>
-                <a href="#" className="btn bg-police btn-sm">
+                <p className="btn bg-police btn-sm">
                   <i className="fa fa-edit" />
-                </a>
+                </p>
               </td>
               <td>
-                <a href="#" className="btn bg-police btn-sm">
+                <p className="btn bg-police btn-sm">
                   <i className="fa fa-times" />
-                </a>
+                </p>
               </td>
               <td>
-                <a href="#" className="">
+                <p className="">
                   <img className="fa fa-map" src="images/gglMap.png" alt="" />
-                </a>
+                </p>
               </td>
             </tr>
             <tr>
@@ -279,54 +279,54 @@ const CrashList = () => (
               <td>Gulu CPS</td>
               <td>Gulu</td>
               <td>
-                <a href="#" className="btn bg-police btn-sm">
+                <p className="btn bg-police btn-sm">
                   <i className="fa fa-search" />
-                </a>
+                </p>
               </td>
               <td>
-                <a href="#" className="btn bg-police btn-sm">
+                <p className="btn bg-police btn-sm">
                   <i className="fa fa-edit" />
-                </a>
+                </p>
               </td>
               <td>
-                <a href="#" className="btn bg-police btn-sm">
+                <p className="btn bg-police btn-sm">
                   <i className="fa fa-times" />
-                </a>
+                </p>
               </td>
               <td>
-                <a href="#" className="">
+                <p className="">
                   <img className="fa fa-map" src="images/gglMap.png" alt="" />
-                </a>
+                </p>
               </td>
             </tr>
           </tbody>
         </table>
         <nav aria-label="Page navigation example">
-          <ul class="pagination">
-            <li class="page-item">
-              <a class="page-link" href="#">
+          <ul className="pagination">
+            <li className="page-item">
+              <p className="page-link">
                 Previous
-              </a>
+              </p>
             </li>
-            <li class="page-item active">
-              <a class="page-link" href="#">
+            <li className="page-item active">
+              <p className="page-link">
                 1
-              </a>
+              </p>
             </li>
-            <li class="page-item">
-              <a class="page-link" href="#">
+            <li className="page-item">
+              <p className="page-link">
                 2
-              </a>
+              </p>
             </li>
-            <li class="page-item">
-              <a class="page-link" href="#">
+            <li className="page-item">
+              <p className="page-link">
                 3
-              </a>
+              </p>
             </li>
-            <li class="page-item">
-              <a class="page-link" href="#">
+            <li className="page-item">
+              <p className="page-link">
                 Next
-              </a>
+              </p>
             </li>
           </ul>
         </nav>
