@@ -5,7 +5,7 @@
         "jest": true
     },
     "extends": [
-        "airbnb"
+        "plugin:react/recommended", "airbnb"
     ],
     "root": true,
     "parser": "babel-eslint",
@@ -24,13 +24,18 @@
         "react"
     ],
     "rules": {
-        "arrow-parens": ["error", "as-needed"]
+        "arrow-parens": ["error", "as-needed"],
+        "jsx-a11y/label-has-associated-control": [ 2, {
+            "labelComponents": ["label"],
+            "labelAttributes": ["htmlFor"],
+            "controlComponents": ["input"]
+          }]
     },
     "overrides": [
         {
          "files": ["setupTests.js"],
             "rules": {
-               "import/no-extraneous-dependencies": "off"   
+               "import/no-extraneous-dependencies": "off"  
             }
         }
        ]

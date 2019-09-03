@@ -9,12 +9,14 @@ import Mapping from './mapping';
 import Report from './report';
 import Administration from './administration';
 import Dashboard from './dashboard';
+import PatientForm from './patients/patient-form';
 
 const Routes = () => (
   <Switch>
     <Route path={RoutePaths.DASHBOARD} component={Dashboard} exact />
     <Route path={RoutePaths.CRASHES} component={Crashes} exact />
     <Route path={RoutePaths.PATIENTS} component={Patients} exact />
+    <Route path={RoutePaths.PATIENT_FORM} component={PatientForm} exact />
     <Route path={RoutePaths.ANALYSIS} component={Analysis} exact />
     <Route path={RoutePaths.MAPPINGS} component={Mapping} exact />
     <Route path={RoutePaths.REPORTS} component={Report} exact />
