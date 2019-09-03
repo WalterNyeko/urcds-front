@@ -1622,15 +1622,15 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   display: block;
   margin-top: 0.25rem; }
 
-.form-row {
+/* .form-row {
   display: flex;
   flex-wrap: wrap;
   margin-right: -5px;
   margin-left: -5px; }
   .form-row > .col,
   .form-row > [class*="col-"] {
-    padding-right: 5px;
-    padding-left: 5px; }
+    padding-right: 0;
+    padding-left: 0; } */
 
 .form-check {
   position: relative;
@@ -8900,8 +8900,8 @@ textarea.form-control {
   padding: 10px 20px;
   line-height: normal; }
 
-select.form-control:not([size]):not([multiple]) {
-  height: 51px; }
+/* select.form-control:not([size]):not([multiple]) {
+  height: 51px; } */
 
 .input-group-addon {
   font-size: 12px;
@@ -10773,13 +10773,13 @@ select.form-control:not([size]):not([multiple]) {
   box-shadow: -5px 7px 10px 0 rgba(51, 51, 51, 0.21); }
 
 .page-title {
-  padding: 0 30px;
-  margin: 20px 0;
+  padding: 0 1.875rem;
+  margin: 1.25rem 0;
   display: block; }
 
 .page-title-text {
-  font-size: 30px;
-  line-height: 38px;
+  font-size: 1.875rem;
+  line-height: 2.375rem;
   margin: 0; }
 
 .breadcrumbs {
@@ -10814,7 +10814,7 @@ select.form-control:not([size]):not([multiple]) {
           color: #3F51B5; }
 
 .page-body {
-  padding: 0 30px; }
+  padding: 0 1.875rem; }
 
 /**************************************************
 [ ICON WIDGET CSS START] **************************

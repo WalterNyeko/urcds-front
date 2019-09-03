@@ -1,5 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import PatientsTable from './patients-table';
+import { PATIENT_FORM } from '../constants/routes';
+import './style.css';
 
 const Patients = () => (
   <div className="page-wrapper">
@@ -10,15 +14,10 @@ const Patients = () => (
             Crash Patients
           </h2>
         </div>
-        <div className="col-sm-6 text-right">
-          <div className="breadcrumbs">
-            <ul>
-              <li>
-                <p>Home</p>
-              </li>
-              <li>Dashboard</li>
-            </ul>
-          </div>
+        <div className="col-sm-6">
+          <span className="h4 float-right add-link ">
+            <Link to={PATIENT_FORM}>Add Patient</Link>
+          </span>
         </div>
       </div>
     </div>
