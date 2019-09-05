@@ -53,3 +53,11 @@ form .page-title {
 .injury {
     height: 3.125rem; /*This is a temporary fix. A better fix is required*/
 }
+
+.error-message {
+    color: #cc0000;
+}
+
+.react-datepicker-wrapper {
+    width: 99%;
+}

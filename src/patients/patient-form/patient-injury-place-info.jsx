@@ -1,12 +1,21 @@
 import React from 'react';
 import { Field } from 'formik';
+import PropTypes from 'prop-types';
+
+import CustomSelect from '../../commons/custom-select';
 
 const labelClassNames = 'border blue-header text-white';
 const groupClassNames = `
   col-md-6 text-center border border-dark
   border-top-0 border-bottom-0 border-left-0`;
 
-const PatientInjuryPlaceInfo = () => (
+const options = [
+  { value: '1', label: 'Kampala' },
+  { value: '2', label: 'Lugazi' },
+  { value: '3', label: 'Mukono' },
+];
+
+const PatientInjuryPlaceInfo = ({ setFieldValue, setFieldTouched }) => (
   <div className="form-row border border-dark mb-4">
     <div className={groupClassNames}>
       <div className="border gray-header">Patient Information</div>
@@ -47,7 +56,7 @@ const PatientInjuryPlaceInfo = () => (
             name="age"
             className="form-control"
             type="text"
-            placeHolder="Enter age"
+            placeholder="Enter age"
           />
         </div>
       </div>
@@ -57,23 +66,15 @@ const PatientInjuryPlaceInfo = () => (
       <div className="form-row">
         <div className="col-md-6">
           <div className={labelClassNames}>
-            <label htmlFor="hospital">District</label>
+            <label htmlFor="district">District</label>
           </div>
-
-          <Field
-            id="district"
-            component="select"
-            className="form-control"
+          <CustomSelect
+            onChange={setFieldValue}
+            onBlur={setFieldTouched}
+            options={options}
             name="district"
-            defaultValue="Default"
-          >
-            <option value="Default" disabled>
-              -- Select District --
-            </option>
-            <option value="1">Kampala</option>
-            <option value="2">Lugazi</option>
-            <option value="3">Mukono</option>
-          </Field>
+            id="district"
+          />
         </div>
         <div className="col-md-6">
           <div className={labelClassNames}>
@@ -84,12 +85,17 @@ const PatientInjuryPlaceInfo = () => (
             name="village"
             className="form-control"
             type="text"
-            placeHolder="Enter village name"
+            placeholder="Enter village name"
           />
         </div>
       </div>
     </div>
   </div>
 );
+
+PatientInjuryPlaceInfo.propTypes = {
+  setFieldValue: PropTypes.func.isRequired,
+  setFieldTouched: PropTypes.func.isRequired,
+};
 
 export default PatientInjuryPlaceInfo;
