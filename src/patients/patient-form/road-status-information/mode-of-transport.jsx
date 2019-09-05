@@ -10,7 +10,9 @@ import { transportModes } from '../data';
 
 const ModeOfTransport = () => (
   <div className={groupClassNames}>
-    <div className={labelClassNames}>Mode of Transport</div>
+    <div className={labelClassNames} data-test="road-user-title">
+      Mode of Transport
+    </div>
     {transportModes.map(transportMode => (
       <div className={formCheckClassNames} key={transportMode.id}>
         <Field

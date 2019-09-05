@@ -13,7 +13,9 @@ const PatientDisposition = () => (
   <div className="form-row border border-dark mb-4">
     <div className={groupClassNames}>
       <div className={labelClassNames}>
-        <label htmlFor="hospital">Patient Disposition</label>
+        <label htmlFor="patientDispositon" data-test="patient-disposition">
+          Patient Disposition
+        </label>
       </div>
       {patientDispositons.map(patientDispositon => (
         <div className={formCheckClassNames} key={patientDispositon.id}>
@@ -35,7 +37,9 @@ const PatientDisposition = () => (
     </div>
     <div className={groupClassNames}>
       <div className={labelClassNames}>
-        <label htmlFor="hospitalOutpatientNo">Status After 30 Days</label>
+        <label htmlFor="patientStatus" data-test="patient-status">
+          Status After 30 Days
+        </label>
       </div>
       {statusesAfter30Days.map(patientStatus => (
         <div className={formCheckClassNames} key={patientStatus.id}>

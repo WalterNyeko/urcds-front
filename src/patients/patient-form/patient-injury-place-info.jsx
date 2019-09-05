@@ -16,12 +16,15 @@ const options = [
 ];
 
 const PatientInjuryPlaceInfo = ({ setFieldValue, setFieldTouched }) => (
-  <div className="form-row border border-dark mb-4">
-    <div className={groupClassNames}>
+  <div
+    className="form-row border border-dark mb-4"
+    data-test="patient-injury-place-info"
+  >
+    <div className={groupClassNames} data-test="patient-info">
       <div className="border gray-header">Patient Information</div>
       <div className="form-row">
         <div className="col-md-6">
-          <div className={labelClassNames}>Gender</div>
+          <div className={labelClassNames} data-test="gender">Gender</div>
           <div className="form-check form-check-inline">
             <Field
               className="form-check-input"
@@ -49,7 +52,7 @@ const PatientInjuryPlaceInfo = ({ setFieldValue, setFieldTouched }) => (
         </div>
         <div className="col-md-6">
           <div className={labelClassNames}>
-            <label htmlFor="age">Age</label>
+            <label htmlFor="age" data-test="age">Age</label>
           </div>
           <Field
             id="age"
@@ -61,12 +64,12 @@ const PatientInjuryPlaceInfo = ({ setFieldValue, setFieldTouched }) => (
         </div>
       </div>
     </div>
-    <div className={groupClassNames}>
+    <div className={groupClassNames} data-test="injury-place">
       <div className="border gray-header">Injury Place</div>
       <div className="form-row">
         <div className="col-md-6">
           <div className={labelClassNames}>
-            <label htmlFor="district">District</label>
+            <label htmlFor="district" data-test="district">District</label>
           </div>
           <CustomSelect
             onChange={setFieldValue}
@@ -78,7 +81,7 @@ const PatientInjuryPlaceInfo = ({ setFieldValue, setFieldTouched }) => (
         </div>
         <div className="col-md-6">
           <div className={labelClassNames}>
-            <label htmlFor="village">Village</label>
+            <label htmlFor="village" data-test="village">Village</label>
           </div>
           <Field
             id="village"

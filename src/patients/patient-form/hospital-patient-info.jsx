@@ -16,10 +16,15 @@ const options = [
 ];
 
 const HospitalPatientInfo = ({ setFieldValue, setFieldTouched }) => (
-  <div className="form-row border border-dark mb-4">
+  <div
+    className="form-row border border-dark mb-4"
+    data-test="hospital-patient-info"
+  >
     <div className={groupClassNames}>
       <div className={labelClassNames}>
-        <label htmlFor="hospital">Hospital</label>
+        <label htmlFor="hospital" data-test="hospital">
+          Hospital
+        </label>
       </div>
       <CustomSelect
         onChange={setFieldValue}
@@ -31,7 +36,9 @@ const HospitalPatientInfo = ({ setFieldValue, setFieldTouched }) => (
     </div>
     <div className={groupClassNames}>
       <div className={labelClassNames}>
-        <label htmlFor="hospitalOutpatientNo">Outpatient No.</label>
+        <label htmlFor="hospitalOutpatientNo" data-test="outpatient-no">
+          Outpatient No.
+        </label>
       </div>
       <Field
         id="hospitalOutpatientNo"
@@ -43,7 +50,9 @@ const HospitalPatientInfo = ({ setFieldValue, setFieldTouched }) => (
     </div>
     <div className="col-md-4 text-center">
       <div className={labelClassNames}>
-        <label htmlFor="hospitalInpatientNo">Inpatient No.</label>
+        <label htmlFor="hospitalInpatientNo" data-test="inpatient-no">
+          Inpatient No.
+        </label>
       </div>
       <Field
         id="hospitalInpatientNo"

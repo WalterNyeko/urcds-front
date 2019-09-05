@@ -8,7 +8,10 @@ const groupClassNames = `
 const BodyAreaWithSeriousInjuriesAndAis = () => (
   <div className="form-row border border-dark mb-4">
     <div className={groupClassNames}>
-      <div className="border border-dark border-top-0 border-left-0 border-right-0 blue-header text-white">
+      <div
+        className="border border-dark border-top-0 border-left-0 border-right-0 blue-header text-white"
+        data-test="title"
+      >
         Body Area with Serious Injuries and AIS
       </div>
       <div className="form-row">

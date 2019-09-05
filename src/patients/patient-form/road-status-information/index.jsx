@@ -24,11 +24,15 @@ const RoadStatusInfo = ({
   <>
     <div className="form-row">
       <div className={dateTimeClassNames}>
-        <div className={`${labelClassNames}`}>Date and Time</div>
+        <div className={`${labelClassNames}`} data-test="date-time-title">
+          Date and Time
+        </div>
         <div className="form-row">
           <div className="col-md-6">
             {touchedInjuryDate && injuryDateError && (
-              <p className="error-message">{injuryDateError}</p>
+              <p className="error-message" data-test="injury-date-error">
+                {injuryDateError}
+              </p>
             )}
             <CustomDatePicker
               id="injuryDate"

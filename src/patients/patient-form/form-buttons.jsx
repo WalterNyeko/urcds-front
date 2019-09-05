@@ -1,7 +1,7 @@
 import React from 'react';
 
 const FormButtons = () => (
-  <div className="form-row mb-4">
+  <div className="form-row mb-4" data-test="form-buttons">
     <div className="col-md-6 text-left">
       <button type="button" className="btn btn-primary cancel">
         Cancel

@@ -23,16 +23,20 @@ const FormSignature = ({
   formCheckedOn,
   setFieldTouched,
 }) => (
-  <div className="form-row border border-dark mb-4">
+  <div className="form-row border border-dark mb-4" data-test="form-signature">
     <div className={groupClassNames}>
       <div className="border gray-header">Form Filled By</div>
       <div className="form-row">
         <div className="col-md-6">
           <div className={labelClassNames}>
-            <label htmlFor="formFilledBy">Name</label>
+            <label htmlFor="formFilledBy" data-test="filled-by">
+              Name
+            </label>
           </div>
           {touchedFilledBy && filledByError && (
-            <p className="error-message">{filledByError}</p>
+            <p className="error-message" data-test="filled-by-error">
+              {filledByError}
+            </p>
           )}
           <Field
             id="formFilledBy"
@@ -44,10 +48,14 @@ const FormSignature = ({
         </div>
         <div className="col-md-6">
           <div className={labelClassNames}>
-            <label htmlFor="formFilledOn">Date</label>
+            <label htmlFor="formFilledOn" data-test="filled-on">
+              Date
+            </label>
           </div>
           {touchedFilledOn && filledOnError && (
-            <p className="error-message">{filledOnError}</p>
+            <p className="error-message" data-test="filled-on-error">
+              {filledOnError}
+            </p>
           )}
           <CustomDatePicker
             id="formFilledOn"
@@ -66,10 +74,14 @@ const FormSignature = ({
       <div className="form-row">
         <div className="col-md-6">
           <div className={labelClassNames}>
-            <label htmlFor="formCheckedBy">Name</label>
+            <label htmlFor="formCheckedBy" data-test="checked-by">
+              Name
+            </label>
           </div>
           {touchedCheckedBy && checkedByError && (
-            <p className="error-message">{checkedByError}</p>
+            <p className="error-message" data-test="checked-by-error">
+              {checkedByError}
+            </p>
           )}
           <Field
             id="formCheckedBy"
@@ -81,10 +93,14 @@ const FormSignature = ({
         </div>
         <div className="col-md-6">
           <div className={labelClassNames}>
-            <label htmlFor="formFilledOn">Date</label>
+            <label htmlFor="formCheckedOn" data-test="checked-on">
+              Date
+            </label>
           </div>
           {touchedCheckedOn && checkedOnError && (
-            <p className="error-message">{checkedOnError}</p>
+            <p className="error-message" data-test="checked-on-error">
+              {checkedOnError}
+            </p>
           )}
           <CustomDatePicker
             id="formCheckedOn"
