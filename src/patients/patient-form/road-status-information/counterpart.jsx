@@ -15,7 +15,9 @@ const counterpartTransportModes = [
 
 const Counterpart = () => (
   <div className={groupClassNames}>
-    <div className={labelClassNames}>Counterpart</div>
+    <div className={labelClassNames} data-test="counterpart-title">
+      Counterpart
+    </div>
     {counterpartTransportModes.map(counterpartTransportMode => (
       <div className={formCheckClassNames} key={counterpartTransportMode.id}>
         <Field

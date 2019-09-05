@@ -32,6 +32,7 @@ const CustomDatePicker = ({
         showMonthDropdown
         showYearDropdown
         maxDate={maxDate}
+        data-test="date-picker"
       />
     </>
   );

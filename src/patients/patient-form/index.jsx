@@ -84,7 +84,9 @@ const PatientForm = ({
           <div className="page-title">
             <div className="row align-items-center">
               <div className="col-sm-6">
-                <h2 className="page-title-text">Patient Form</h2>
+                <h2 className="page-title-text" data-test="form-title">
+                  Patient Form
+                </h2>
               </div>
             </div>
           </div>

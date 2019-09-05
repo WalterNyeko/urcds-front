@@ -24,6 +24,7 @@ const CustomTimePicker = ({
         className="form-control"
         placeholderText="HH:MM"
         dateFormat="h:mm aa"
+        data-test="time-picker"
       />
     </>
   );

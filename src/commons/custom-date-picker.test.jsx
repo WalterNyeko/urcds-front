@@ -4,26 +4,23 @@ import { shallow } from 'enzyme';
 import CustomDatePicker from './custom-date-picker';
 
 describe('CustomDatePicker component', () => {
-  let mountCustomDatePicker;
-
-  const setFieldValue = jest.fn();
-  const formCheckedOn = new Date();
-  const setFieldTouched = jest.fn();
-  beforeEach(() => {
-    mountCustomDatePicker = shallow(
+  it('should render CustomDatePicker component ', () => {
+    const mountCustomDatePicker = shallow(
       <CustomDatePicker
         id="formCheckedOn"
-        onChange={setFieldValue}
-        selected={formCheckedOn}
+        onChange={jest.fn()}
+        selected={new Date()}
         name="formCheckedOn"
         placeholderText="Click to select a date"
-        onBlur={setFieldTouched}
+        onBlur={jest.fn()}
         maxDate={new Date()}
       />,
     );
-  });
 
-  it('should render date component ', () => {
+    const dataTestAttribute = mountCustomDatePicker.find(
+      '[data-test="date-picker"]',
+    );
     expect(mountCustomDatePicker.length).toBe(1);
+    expect(dataTestAttribute.length).toBe(1);
   });
 });

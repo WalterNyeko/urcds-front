@@ -10,7 +10,9 @@ import { roadUsers } from '../data';
 
 const RoadUser = () => (
   <div className={groupClassNames}>
-    <div className={labelClassNames}>Road User</div>
+    <div className={labelClassNames} data-test="road-user-title">
+      Road User
+    </div>
     {roadUsers.map(roadUser => (
       <div className={formCheckClassNames} key={roadUser.id}>
         <Field

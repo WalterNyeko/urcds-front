@@ -10,7 +10,9 @@ import { beltOrHelmetOptions } from '../data';
 
 const BeltOrHelmetUsed = () => (
   <div className={groupClassNames}>
-    <div className={labelClassNames}>Belt or Helmet Used</div>
+    <div className={labelClassNames} data-test="belt-or-helmet-used-title">
+      Belt or Helmet Used
+    </div>
     {beltOrHelmetOptions.map(beltOrHelmetOption => (
       <div className={formCheckClassNames} key={beltOrHelmetOption.id}>
         <Field

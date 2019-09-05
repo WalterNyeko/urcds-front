@@ -17,6 +17,7 @@ const CustomSelect = ({
       options={options}
       onChange={handleChange}
       onBlur={handleBlur}
+      data-test="selector"
     />
   );
 };
