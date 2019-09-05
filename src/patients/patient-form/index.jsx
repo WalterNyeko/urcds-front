@@ -1,5 +1,8 @@
+/* eslint-disable react/forbid-prop-types */
 import React from 'react';
 import { withFormik, Form } from 'formik';
+import * as Yup from 'yup';
+import PropTypes from 'prop-types';
 
 import HospitalPatientInfo from './hospital-patient-info';
 import PatientInjuryPlaceInfo from './patient-injury-place-info';
@@ -10,7 +13,70 @@ import FormSignature from './form-signature';
 import PatientDisposition from './patient-disposition';
 import FormButtons from './form-buttons';
 
-const PatientForm = () => (
+const formikEnhancer = withFormik({
+  mapPropsToValues({
+    hospitalOutpatientNo,
+    hospitalInpatientNo,
+    village,
+    age,
+    injuryDate,
+    injuryTime,
+    formFilledBy,
+    formCheckedBy,
+    formFilledOn,
+    formCheckedOn,
+    hospital,
+    district,
+  }) {
+    return {
+      hospitalOutpatientNo: hospitalOutpatientNo || '',
+      hospitalInpatientNo: hospitalInpatientNo || '',
+      village: village || '',
+      age: age || '',
+      injuryDate: injuryDate || '',
+      injuryTime: injuryTime || '',
+      formFilledBy: formFilledBy || '',
+      formCheckedBy: formCheckedBy || '',
+      formFilledOn: formFilledOn || '',
+      formCheckedOn: formCheckedOn || '',
+      hospital: hospital || {},
+      district: district || {},
+    };
+  },
+  handleSubmit(values) {
+    const payload = {
+      ...values,
+      hospital: values.hospital.value,
+      district: values.district.value,
+      injuryDate: values.injuryDate,
+    };
+    console.log(payload);
+  },
+  validationSchema: Yup.object().shape({
+    formFilledBy: Yup.string().required('Name is required'),
+    formCheckedBy: Yup.string().required('Name is required'),
+    formFilledOn: Yup.date()
+      .nullable()
+      .max(new Date(), 'Date can not be a future date')
+      .required('Date is required'),
+    formCheckedOn: Yup.date()
+      .nullable()
+      .max(new Date(), 'Date can not be a future date')
+      .required('Date is required'),
+    injuryDate: Yup.date()
+      .nullable()
+      .max(new Date(), 'Injury date can not be a future date')
+      .required('Injury date is required'),
+  }),
+});
+
+const PatientForm = ({
+  errors,
+  touched,
+  setFieldValue,
+  setFieldTouched,
+  values,
+}) => (
   <div className="page-wrapper">
     <div className="row">
       <div className="col-md-12">
@@ -23,12 +89,38 @@ const PatientForm = () => (
             </div>
           </div>
           <div className="page-body">
-            <HospitalPatientInfo />
-            <PatientInjuryPlaceInfo />
-            <RoadStatusInfo />
+            <HospitalPatientInfo
+              setFieldValue={setFieldValue}
+              setFieldTouched={setFieldTouched}
+            />
+            <PatientInjuryPlaceInfo
+              setFieldValue={setFieldValue}
+              setFieldTouched={setFieldTouched}
+            />
+            <RoadStatusInfo
+              setFieldValue={setFieldValue}
+              injuryDate={values.injuryDate}
+              injuryDateError={errors.injuryDate || null}
+              touchedInjuryDate={touched.injuryDate || false}
+              injuryTime={values.injuryTime}
+              setFieldTouched={setFieldTouched}
+            />
             <BodyAreaWithSeriousInjuriesAndAis />
             <PatientDisposition />
-            <FormSignature />
+            <FormSignature
+              filledByError={errors.formFilledBy || null}
+              touchedFilledBy={touched.formFilledBy || false}
+              checkedByError={errors.formCheckedBy || null}
+              touchedCheckedBy={touched.formCheckedBy || false}
+              filledOnError={errors.formFilledOn || null}
+              touchedFilledOn={touched.formFilledOn || false}
+              checkedOnError={errors.formCheckedOn || null}
+              touchedCheckedOn={touched.formCheckedOn || false}
+              setFieldValue={setFieldValue}
+              formFilledOn={values.formFilledOn}
+              formCheckedOn={values.formCheckedOn}
+              setFieldTouched={setFieldTouched}
+            />
             <FormButtons />
           </div>
         </Form>
@@ -37,27 +129,18 @@ const PatientForm = () => (
   </div>
 );
 
-export default withFormik({
-  mapPropsToValues({
-    hospitalOutpatientNo,
-    hospitalInpatientNo,
-    village,
-    age,
-    injuryDate,
-    formFilledBy,
-    formCheckedBy,
-  }) {
-    return {
-      hospitalOutpatientNo: hospitalOutpatientNo || '',
-      hospitalInpatientNo: hospitalInpatientNo || '',
-      village: village || '',
-      age: age || '',
-      injuryDate: injuryDate || '',
-      formFilledBy: formFilledBy || '',
-      formCheckedBy: formCheckedBy || '',
-    };
-  },
-  handleSubmit(values) {
-    console.log(values);
-  },
-})(PatientForm);
+PatientForm.defaultProps = {
+  errors: null,
+  touched: null,
+  values: null,
+};
+
+PatientForm.propTypes = {
+  errors: PropTypes.object,
+  touched: PropTypes.object,
+  values: PropTypes.object,
+  setFieldValue: PropTypes.func.isRequired,
+  setFieldTouched: PropTypes.func.isRequired,
+};
+
+export default formikEnhancer(PatientForm);

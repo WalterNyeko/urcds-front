@@ -1,32 +1,33 @@
 import React from 'react';
 import { Field } from 'formik';
+import PropTypes from 'prop-types';
+
+import CustomSelect from '../../commons/custom-select';
 
 const labelClassNames = 'border blue-header text-white';
 const groupClassNames = `
   col-md-4 text-center border border-dark
   border-top-0 border-bottom-0 border-left-0`;
 
-const HospitalPatientInfo = () => (
+const options = [
+  { value: '1', label: 'Masaka referral Hospital' },
+  { value: '2', label: 'Mulago Hospital' },
+  { value: '3', label: 'St. Marys Hospital Lacor' },
+];
+
+const HospitalPatientInfo = ({ setFieldValue, setFieldTouched }) => (
   <div className="form-row border border-dark mb-4">
     <div className={groupClassNames}>
       <div className={labelClassNames}>
         <label htmlFor="hospital">Hospital</label>
       </div>
-
-      <Field
-        id="hospital"
-        component="select"
-        className="form-control"
+      <CustomSelect
+        onChange={setFieldValue}
+        onBlur={setFieldTouched}
+        options={options}
         name="hospital"
-        defaultValue="Default"
-      >
-        <option value="Default" disabled>
-          -- Select Hospital --
-        </option>
-        <option value="1">Masaka referral Hospital</option>
-        <option value="2">Mulago Hospital</option>
-        <option value="3">St. Mary&apos;s Hospital Lacor</option>
-      </Field>
+        id="hospital"
+      />
     </div>
     <div className={groupClassNames}>
       <div className={labelClassNames}>
@@ -37,7 +38,7 @@ const HospitalPatientInfo = () => (
         name="hospitalOutpatientNo"
         className="form-control"
         type="text"
-        placeHolder="Enter outpatient number. e.g 2536b"
+        placeholder="Enter outpatient number. e.g 2536b"
       />
     </div>
     <div className="col-md-4 text-center">
@@ -49,10 +50,15 @@ const HospitalPatientInfo = () => (
         name="hospitalInpatientNo"
         className="form-control"
         type="text"
-        placeHolder="Enter inpatient number. e.g 2536b"
+        placeholder="Enter inpatient number. e.g 2536b"
       />
     </div>
   </div>
 );
+
+HospitalPatientInfo.propTypes = {
+  setFieldValue: PropTypes.func.isRequired,
+  setFieldTouched: PropTypes.func.isRequired,
+};
 
 export default HospitalPatientInfo;

@@ -1,15 +1,55 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-import DateAndTime from './date-and-time';
 import ModeOfTransport from './mode-of-transport';
 import RoadUser from './road-user';
 import Counterpart from './counterpart';
 import BeltOrHelmetUsed from './belt-or-helmet-used';
+import { labelClassNames } from './class-names-constants';
+import CustomDatePicker from '../../../commons/custom-date-picker';
+import CustomTimePicker from '../../../commons/custom-time-picker';
 
-const RoadStatusInfo = () => (
+const dateTimeClassNames = `
+  col-md-6 text-center border border-dark
+  border-bottom-0`;
+
+const RoadStatusInfo = ({
+  setFieldValue,
+  injuryDate,
+  injuryTime,
+  setFieldTouched,
+  touchedInjuryDate,
+  injuryDateError,
+}) => (
   <>
     <div className="form-row">
-      <DateAndTime />
+      <div className={dateTimeClassNames}>
+        <div className={`${labelClassNames}`}>Date and Time</div>
+        <div className="form-row">
+          <div className="col-md-6">
+            {touchedInjuryDate && injuryDateError && (
+              <p className="error-message">{injuryDateError}</p>
+            )}
+            <CustomDatePicker
+              id="injuryDate"
+              onChange={setFieldValue}
+              selected={injuryDate}
+              name="injuryDate"
+              placeholderText="Click to select a date"
+              onBlur={setFieldTouched}
+              maxDate={new Date()}
+            />
+          </div>
+          <div className="col-md-6">
+            <CustomTimePicker
+              name="injuryTime"
+              onChange={setFieldValue}
+              selected={injuryTime}
+              id="injuryTime"
+            />
+          </div>
+        </div>
+      </div>
     </div>
     <div className="form-row border border-dark mb-4">
       <ModeOfTransport />
@@ -19,5 +59,26 @@ const RoadStatusInfo = () => (
     </div>
   </>
 );
+
+RoadStatusInfo.defaultProps = {
+  injuryDate: null,
+  injuryDateError: null,
+  touchedInjuryDate: false,
+};
+
+RoadStatusInfo.propTypes = {
+  setFieldValue: PropTypes.func.isRequired,
+  setFieldTouched: PropTypes.func.isRequired,
+  injuryDateError: PropTypes.string,
+  touchedInjuryDate: PropTypes.oneOfType([PropTypes.bool, PropTypes.object]),
+  injuryDate: PropTypes.oneOfType([
+    PropTypes.instanceOf(Date),
+    PropTypes.string,
+  ]),
+  injuryTime: PropTypes.oneOfType([
+    PropTypes.instanceOf(Date),
+    PropTypes.string,
+  ]).isRequired,
+};
 
 export default RoadStatusInfo;
