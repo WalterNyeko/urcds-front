@@ -8,11 +8,11 @@ describe('CustomDatePicker component', () => {
     const mountCustomDatePicker = shallow(
       <CustomDatePicker
         id="formCheckedOn"
-        onChange={jest.fn()}
+        formikSetFieldValue={jest.fn()}
         selected={new Date()}
         name="formCheckedOn"
         placeholderText="Click to select a date"
-        onBlur={jest.fn()}
+        formikSetFieldTouched={jest.fn()}
         maxDate={new Date()}
       />,
     );

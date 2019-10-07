@@ -36,18 +36,18 @@ const RoadStatusInfo = ({
             )}
             <CustomDatePicker
               id="injuryDate"
-              onChange={setFieldValue}
+              formikSetFieldValue={setFieldValue}
               selected={injuryDate}
               name="injuryDate"
               placeholderText="Click to select a date"
-              onBlur={setFieldTouched}
+              formikSetFieldTouched={setFieldTouched}
               maxDate={new Date()}
             />
           </div>
           <div className="col-md-6">
             <CustomTimePicker
               name="injuryTime"
-              onChange={setFieldValue}
+              formikSetFieldValue={setFieldValue}
               selected={injuryTime}
               id="injuryTime"
             />

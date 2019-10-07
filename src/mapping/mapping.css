@@ -1,0 +1,11 @@
+.map {
+    min-height: 37.5rem;
+}
+
+.crash-level-td {
+    width: 1.875rem;
+    text-align: center;
+}
+.crash-level-table {
+    margin-top: 0.625rem;
+}

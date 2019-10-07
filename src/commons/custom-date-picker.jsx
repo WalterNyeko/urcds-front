@@ -2,19 +2,19 @@ import React from 'react';
 import DatePicker from 'react-datepicker';
 import PropTypes from 'prop-types';
 
-import { onChangeHandler, onBlurHandler } from './handlers';
+import { formikValueSetter, formikTouchedSetter } from './handlers';
 import 'react-datepicker/dist/react-datepicker.css';
 
 const CustomDatePicker = ({
   name,
-  onChange,
   selected,
   id,
-  onBlur,
+  formikSetFieldValue,
+  formikSetFieldTouched,
   maxDate,
 }) => {
-  const handleChange = onChangeHandler(onChange, name);
-  const handleBlur = onBlurHandler(onBlur, name);
+  const handleChange = formikValueSetter(formikSetFieldValue, name);
+  const handleBlur = formikTouchedSetter(formikSetFieldTouched, name);
 
   return (
     <>
@@ -44,9 +44,9 @@ CustomDatePicker.defaultProps = {
 };
 
 CustomDatePicker.propTypes = {
-  onChange: PropTypes.func.isRequired,
+  formikSetFieldTouched: PropTypes.func.isRequired,
   name: PropTypes.string.isRequired,
-  onBlur: PropTypes.func.isRequired,
+  formikSetFieldValue: PropTypes.func.isRequired,
   maxDate: PropTypes.instanceOf(Date),
   id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   selected: PropTypes.oneOfType([PropTypes.instanceOf(Date), PropTypes.string]),

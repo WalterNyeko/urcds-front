@@ -1,2 +1,7 @@
-export const onChangeHandler = (onChange, name) => value => onChange(name, value);
-export const onBlurHandler = (onBlur, name) => () => onBlur(name, true);
+export const formikValueSetter = (
+  formikSetFieldValue, name,
+) => value => formikSetFieldValue(name, value);
+
+export const formikTouchedSetter = (
+  formikSetFieldTouched, name,
+) => () => formikSetFieldTouched(name, true);

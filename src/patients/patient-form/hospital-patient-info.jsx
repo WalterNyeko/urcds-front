@@ -27,8 +27,8 @@ const HospitalPatientInfo = ({ setFieldValue, setFieldTouched }) => (
         </label>
       </div>
       <CustomSelect
-        onChange={setFieldValue}
-        onBlur={setFieldTouched}
+        formikSetFieldValue={setFieldValue}
+        formikSetFieldTouched={setFieldTouched}
         options={options}
         name="hospital"
         id="hospital"

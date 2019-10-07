@@ -72,8 +72,8 @@ const PatientInjuryPlaceInfo = ({ setFieldValue, setFieldTouched }) => (
             <label htmlFor="district" data-test="district">District</label>
           </div>
           <CustomSelect
-            onChange={setFieldValue}
-            onBlur={setFieldTouched}
+            formikSetFieldValue={setFieldValue}
+            formikSetFieldTouched={setFieldTouched}
             options={options}
             name="district"
             id="district"

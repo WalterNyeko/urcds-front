@@ -8,7 +8,7 @@ describe('CustomTimePicker component', () => {
     const mountCustomTimePicker = shallow(
       <CustomTimePicker
         name="injuryTime"
-        onChange={jest.fn()}
+        formikSetFieldValue={jest.fn()}
         selected={new Date()}
         id="injuryTime"
       />,
