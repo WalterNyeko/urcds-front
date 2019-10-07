@@ -12,8 +12,8 @@ describe('CustomSelect component', () => {
 
     const mountCustomSelect = shallow(
       <CustomSelect
-        onChange={jest.fn()}
-        onBlur={jest.fn()}
+        formikSetFieldValue={jest.fn()}
+        formikSetFieldTouched={jest.fn()}
         options={options}
         name="hospital"
         id="hospital"

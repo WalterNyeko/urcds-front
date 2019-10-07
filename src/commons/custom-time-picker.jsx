@@ -2,19 +2,19 @@ import React from 'react';
 import DatePicker from 'react-datepicker';
 import PropTypes from 'prop-types';
 
-import { onChangeHandler } from './handlers';
+import { formikValueSetter } from './handlers';
 import 'react-datepicker/dist/react-datepicker.css';
 
 const CustomTimePicker = ({
-  name, onChange, selected, id,
+  name, formikSetFieldValue, selected, id,
 }) => {
-  const handleChange1 = onChangeHandler(onChange, name);
+  const handleChange = formikValueSetter(formikSetFieldValue, name);
 
   return (
     <>
       <DatePicker
         id={id}
-        onChange={handleChange1}
+        onChange={handleChange}
         selected={selected}
         showTimeSelect
         showTimeSelectOnly
@@ -35,7 +35,7 @@ CustomTimePicker.defaultProps = {
 };
 
 CustomTimePicker.propTypes = {
-  onChange: PropTypes.func.isRequired,
+  formikSetFieldValue: PropTypes.func.isRequired,
   name: PropTypes.string.isRequired,
   id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   selected: PropTypes.oneOfType([PropTypes.instanceOf(Date), PropTypes.string]),

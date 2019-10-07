@@ -1,25 +1,28 @@
-import { onBlurHandler, onChangeHandler } from './handlers';
+import { formikValueSetter, formikTouchedSetter } from './handlers';
 
 describe('Handlers module', () => {
-  describe('onBlurHandler method', () => {
-    it('it should call onBlur method with a true value', () => {
-      const onBlur = jest.fn();
-      const handleBlur = onBlurHandler(onBlur, 'fieldName');
-      handleBlur();
+  describe('formikValueSetter method', () => {
+    it('it should call formikSetFieldValue method with a true value', () => {
+      const formikSetFieldValue = jest.fn();
+      const handleChange = formikValueSetter(formikSetFieldValue, 'fieldName');
+      handleChange('value');
 
-      expect(onBlur).toHaveBeenCalled();
-      expect(onBlur).toHaveBeenCalledWith('fieldName', true);
+      expect(formikSetFieldValue).toHaveBeenCalled();
+      expect(formikSetFieldValue).toHaveBeenCalledWith('fieldName', 'value');
     });
   });
 
-  describe('onChangeHandler method', () => {
-    it('it should call onChange method', () => {
-      const onChange = jest.fn();
-      const handleChange = onChangeHandler(onChange, 'fieldName');
-      handleChange('value');
+  describe('formikTouchedSetter method', () => {
+    it('it should call formikSetFieldTouched method', () => {
+      const formikSetFieldTouched = jest.fn();
+      const handleBlur = formikTouchedSetter(
+        formikSetFieldTouched,
+        'fieldName',
+      );
+      handleBlur('fieldName');
 
-      expect(onChange).toHaveBeenCalled();
-      expect(onChange).toHaveBeenCalledWith('fieldName', 'value');
+      expect(formikSetFieldTouched).toHaveBeenCalled();
+      expect(formikSetFieldTouched).toHaveBeenCalledWith('fieldName', true);
     });
   });
 });

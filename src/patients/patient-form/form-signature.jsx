@@ -59,11 +59,11 @@ const FormSignature = ({
           )}
           <CustomDatePicker
             id="formFilledOn"
-            onChange={setFieldValue}
+            formikSetFieldValue={setFieldValue}
             selected={formFilledOn}
             name="formFilledOn"
             placeholderText="Click to select a date"
-            onBlur={setFieldTouched}
+            formikSetFieldTouched={setFieldTouched}
             maxDate={new Date()}
           />
         </div>
@@ -104,11 +104,11 @@ const FormSignature = ({
           )}
           <CustomDatePicker
             id="formCheckedOn"
-            onChange={setFieldValue}
+            formikSetFieldValue={setFieldValue}
             selected={formCheckedOn}
             name="formCheckedOn"
             placeholderText="Click to select a date"
-            onBlur={setFieldTouched}
+            formikSetFieldTouched={setFieldTouched}
             maxDate={new Date()}
           />
         </div>
